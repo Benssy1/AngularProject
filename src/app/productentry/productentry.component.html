@@ -1,0 +1,37 @@
+<div class="container">
+    <form class="form-group" (ngSubmit)="save()">
+        <div>
+            <label for="pid">Id</label>
+        </div>
+
+        <div>
+            <input type="text" id="pid" class="form-control" [(ngModel)]="model.pid" name=pid>
+        </div>
+
+        <div>
+            <label for="name">Name</label>
+        </div>
+
+        <div>
+            <input type="text" id="name" minlength="3" #Name="ngModel" class="form-control" [(ngModel)]="model.name" name="Name">
+            <div [hidden]="Name.valid || Name.pristine"
+            class="alert alert-danger">
+        Error
+            </div>
+        
+        </div>
+
+        <div>
+            <label for="price">Price</label>
+        </div>
+
+        <div>
+            <input type="text" id="price" class="form-control" [(ngModel)]="model.price" name="price">
+        </div>
+
+        <div>
+         <button>save</button>
+        </div>
+
+    </form>
+</div>
