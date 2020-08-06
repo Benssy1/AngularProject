@@ -1,6 +1,12 @@
 <!--<p>welcome</p>
 <app-sample></app-sample>
-<app-calculator></app-calculator>-->
+<app-calculator></app-calculator>
+
+<app-productlist></app-productlist>-->
+<app-inventory></app-inventory>  
+<app-animate></app-animate>  
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,8 +25,26 @@
             <a class="nav-link" [routerLink] ="['/test']">Sample</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink] ="['/pro']">Product</a>
+            <a class="nav-link" [routerLink] ="['/ticket']">NameEditor</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink] ="['/pro']">Productentry</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" [routerLink] ="['/ord']">Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink] ="['/or']">ProductList</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink] ="['/shop']">Shopping cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink] ="['/viewcart']">Cart</a>
+          </li>
+        
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Dropdown
@@ -46,5 +70,62 @@
 
 <!--<a [routerLink]="['/home']">calculator</a>
 <a [routerLink]="['/test']">sample</a>-->
-<fa-icon [icon]="faBell"></fa-icon>
+<!--<fa-icon [icon]="faBell"></fa-icon>--><!--to create the icons-->
+
+
+<!--TEMPLATES--><!--IT IS USED for reusing the particular content-->
+<ng-template #mytemplate>
+  <div style="background-color:cadetblue;width: 100%;height: 200px;">
+  <p>welcome!!!!!</p>
+</div>
+</ng-template>
+<ng-template  [ngTemplateOutlet]="mytemplate"></ng-template>
+<h3>hellooooooo </h3>
+<p>
+  hii alll,welcome to the class
+</p>
+<ng-template  [ngTemplateOutlet]="mytemplate"></ng-template>
+
+
+<!--material design-->
+<button class="mdc-button mdc-button--raised">
+  <div class="mdc-button__ripple"></div>
+  <i class="material-icons mdc-button__icon" aria-hidden="true"
+    >bookmark</i
+  >
+  <span class="mdc-button__label">Contained Button plus Icon</span>
+</button>
+
+ <!--datepicker-->
+
+<mat-form-field>
+  <input matInput [matDatepicker] = "picker" placeholder = "Choose a date">
+  <mat-datepicker-toggle matSuffix [for] = "picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+
+<!--navigation drawer-->
+<aside class="mdc-drawer">
+  <div class="mdc-drawer__content">
+    <nav class="mdc-list">
+      <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+        <span class="mdc-list-item__ripple"></span>
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+        <span class="mdc-list-item__text">Inbox</span>
+      </a>
+      <a class="mdc-list-item" href="#">
+        <span class="mdc-list-item__ripple"></span>
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+        <span class="mdc-list-item__text">Outgoing</span>
+      </a>
+      <a class="mdc-list-item" href="#">
+        <span class="mdc-list-item__ripple"></span>
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+        <span class="mdc-list-item__text">Drafts</span>
+      </a>
+    </nav>
+  </div>
+</aside>
+
 <router-outlet></router-outlet>

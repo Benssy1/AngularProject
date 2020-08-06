@@ -1,0 +1,5 @@
+<p>animate works!</p>
+<button (click)="toggle()">change</button>
+<div [@openClose]="isOpen ? 'open' : 'close'">
+    <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+  </div>

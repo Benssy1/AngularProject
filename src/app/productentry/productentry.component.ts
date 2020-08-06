@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Product} from '../product'
+import {DateService}from '../date.service'
+
 
 @Component({
   selector: 'app-productentry',
@@ -8,8 +10,11 @@ import {Product} from '../product'
 })
 export class ProductentryComponent implements OnInit {
   model:Product
-  constructor() {
+  constructor(private ds:DateService) {
     console.log("constuctor...")
+    console.log("from product entry",ds.getDate())
+    
+    
    }
 
   ngOnInit(): void {

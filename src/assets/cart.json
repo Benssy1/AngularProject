@@ -1,0 +1,15 @@
+ [{
+    "pid":"1","pname":"mobile","price":12000,"path":"../assets/Images/mob.jpeg"
+
+    },
+    {
+        "pid":"2","pname":"laptop","price":36000,"path":"../assets/Images/laptop.jpeg"
+    
+        },
+
+
+    {
+    "pid":"3","pname":"headset","price":1000,"path":"../assets/Images/headset.jpeg"
+
+}]
+    

@@ -1,0 +1,43 @@
+<form action="" [formGroup]="profileForm" (ngSubmit)="save()">
+    <div>
+        <label for="">First name</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" formControlName="fname">
+        <!-- {{fname.value}} -->
+    </div>
+    <div>
+        <label for="">Lastname</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" formControlName="lname">
+    </div>
+    <div>
+        <label for="">Email</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" formControlName="email">
+    </div>
+    <div>Address</div>
+    <div formGroupName="address">
+        <div>
+            <label for="">Houseno</label>
+        </div>
+        <div>
+            <input type="text" class="form-control" formControlName="houseno">
+        </div>
+        <div>
+            <label for="">Landmark</label>  
+        </div>
+        <div>
+            <input type="text" class="form-control" formControlName="landmark">
+        </div>
+        <div>
+            <label for="">City</label>
+        </div>
+        <div>
+            <input type="text" class="form-control" formControlName="city">
+        </div>
+    </div>
+    <button>Save</button>
+</form>
